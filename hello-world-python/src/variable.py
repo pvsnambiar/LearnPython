@@ -39,3 +39,54 @@ print (x + s + t) # print the sum of two variables
 print (x + s + t + s)
 print (x-t)
 print (x , y) 
+
+#--------------------------------
+print("-----------------")
+#Global Variables
+#Create a variable outside of a function, and use it inside the function
+x = "awesome"
+
+def myfunc():
+  print("You are " + x)
+
+myfunc()
+
+print("-----------------")
+
+#Create a variable inside a function, with the same name as the global variable
+
+aw = "awesome"
+
+def myfunc():
+  aw = "fantastic"
+  print("Python is " + aw)
+
+myfunc()
+
+print("Tanmay is " + aw)
+
+print("-----------------")
+
+#If you use the global keyword, the variable belongs to the global scope:
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Advaith is " + x)
+
+print("-----------------")
+
+#To change the value of a global variable inside a function, refer to the variable by using the global keyword:
+
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Manju is " + x)
